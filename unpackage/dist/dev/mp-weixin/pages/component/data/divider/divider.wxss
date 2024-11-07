@@ -1,0 +1,5 @@
+
+.fui-text {
+		font-size: 24rpx;
+		padding-left: 8rpx;
+}

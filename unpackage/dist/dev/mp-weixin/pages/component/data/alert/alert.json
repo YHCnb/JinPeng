@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "警告框",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-alert": "../../../../components/firstui/fui-alert/fui-alert",
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon"
+  }
+}

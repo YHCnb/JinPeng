@@ -1,0 +1,1 @@
+<view class="fui-wrap"><view class="fui-content__box"><view class="fui-img__box"><image src="{{a}}" class="fui-img" mode="widthFix"></image></view><view class="fui-title">开发中</view><view class="fui-sub__title">功能开发中，敬请期待！</view><view class="fui-btn__box"><fui-button wx:if="{{c}}" bindclick="{{b}}" u-i="59c0965d-0" bind:__l="__l" u-p="{{c}}"></fui-button></view></view></view>

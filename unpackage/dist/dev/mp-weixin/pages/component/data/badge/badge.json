@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "徽章",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-badge": "../../../../components/firstui/fui-badge/fui-badge",
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell"
+  }
+}

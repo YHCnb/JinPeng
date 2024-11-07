@@ -1,0 +1,40 @@
+
+.fui-divider__wrap.data-v-7a128a94 {
+
+		width: 100%;
+		display: flex;
+		box-sizing: border-box;
+
+		text-align: center;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+}
+.fui-divider__line.data-v-7a128a94 {
+
+
+
+
+
+		height: 1px;
+		transform: scaleY(0.5) translateZ(0);
+
+		flex: 1;
+}
+.fui-divider__text-box.data-v-7a128a94 {
+		position: relative;
+		text-align: center;
+		padding: 0 8rpx;
+		z-index: 1;
+
+		display: flex;
+		flex-shrink: 0;
+
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+}
+.fui-divider__text.data-v-7a128a94 {
+		padding: 0 10rpx;
+}

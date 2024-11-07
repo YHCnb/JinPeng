@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "列表",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell",
+    "fui-badge": "../../../../components/firstui/fui-badge/fui-badge",
+    "fui-list": "../../../../components/firstui/fui-list/fui-list"
+  }
+}

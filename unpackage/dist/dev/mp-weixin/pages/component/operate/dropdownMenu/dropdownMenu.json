@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "下拉菜单",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon",
+    "fui-dropdown-menu": "../../../../components/firstui/fui-dropdown-menu/fui-dropdown-menu",
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell"
+  }
+}

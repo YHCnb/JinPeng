@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "分段器",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-segmented-control": "../../../../components/firstui/fui-segmented-control/fui-segmented-control"
+  }
+}

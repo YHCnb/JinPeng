@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "上拉菜单",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-button": "../../../../components/firstui/fui-button/fui-button",
+    "fui-actionsheet": "../../../../components/firstui/fui-actionsheet/fui-actionsheet"
+  }
+}

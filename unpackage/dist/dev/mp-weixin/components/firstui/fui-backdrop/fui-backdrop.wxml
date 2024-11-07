@@ -1,0 +1,1 @@
+<view class="{{['fui-backdrop__wrap', 'data-v-03c5731d', a && 'fui-backdrop__bg', b && 'fui-backdrop__show']}}" style="{{'background:' + c + ';' + ('position:' + d) + ';' + ('z-index:' + e)}}" catchtap="{{f}}"><slot></slot></view>

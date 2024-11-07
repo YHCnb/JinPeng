@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "标签页",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-tabs": "../../../../components/firstui/fui-tabs/fui-tabs"
+  }
+}

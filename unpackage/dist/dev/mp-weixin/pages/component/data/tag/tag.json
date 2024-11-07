@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "标签",
+  "enablePullDownRefresh": false,
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFE",
+  "usingComponents": {
+    "fui-tag": "../../../../components/firstui/fui-tag/fui-tag",
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon"
+  }
+}

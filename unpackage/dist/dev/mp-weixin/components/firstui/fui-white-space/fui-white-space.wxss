@@ -1,0 +1,15 @@
+
+.fui-white__space-wrap.data-v-5ce5c5a7 {
+
+		width: 100%;
+		box-sizing: border-box;
+}
+.fui-white__space-small.data-v-5ce5c5a7 {
+		height: 8rpx
+}
+.fui-white__space-default.data-v-5ce5c5a7 {
+		height: 16rpx
+}
+.fui-white__space-large.data-v-5ce5c5a7 {
+		height: 24rpx
+}

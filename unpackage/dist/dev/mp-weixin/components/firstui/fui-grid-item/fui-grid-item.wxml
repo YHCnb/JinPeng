@@ -1,0 +1,1 @@
+<view wx:if="{{a}}" style="{{i}}" class="fui-grid__item data-v-7636b125"><view class="{{[b && 'fui-grid__item-border', c && 'fui-highlight', 'fui-grid__item-box', 'data-v-7636b125']}}" style="{{'border-right-color:' + d + ';' + ('border-bottom-color:' + e) + ';' + ('border-top-color:' + f) + ';' + ('background-color:' + g)}}" bindtap="{{h}}"><slot></slot></view></view>

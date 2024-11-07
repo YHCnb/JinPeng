@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "上下间距",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-white-space": "../../../../components/firstui/fui-white-space/fui-white-space"
+  }
+}

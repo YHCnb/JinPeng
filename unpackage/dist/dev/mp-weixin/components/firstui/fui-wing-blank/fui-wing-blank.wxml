@@ -1,0 +1,1 @@
+<view class="{{['fui-wing__blank-wrap', 'data-v-0c14cef3', a, b]}}" style="{{c}}" bindtap="{{d}}"><slot></slot></view>

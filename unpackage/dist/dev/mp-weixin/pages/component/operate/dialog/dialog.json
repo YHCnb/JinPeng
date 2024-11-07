@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "对话框",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-button": "../../../../components/firstui/fui-button/fui-button",
+    "fui-dialog": "../../../../components/firstui/fui-dialog/fui-dialog"
+  }
+}

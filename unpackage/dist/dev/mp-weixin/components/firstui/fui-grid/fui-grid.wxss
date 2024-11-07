@@ -1,0 +1,69 @@
+
+.fui-grid__wrap.data-v-5a018aeb {
+
+		width: 100%;
+		display: flex;
+		box-sizing: border-box;
+
+
+
+
+		flex-direction: column;
+
+		/* 以下css可能导致数据过多nvue端直接白屏不显示 */
+
+		transition-property: opacity;
+		transition-duration: .2s;
+		transition-timing-function: ease-in-out;
+}
+.fui-grid__wrap-hidden.data-v-5a018aeb {
+		opacity: 0;
+}
+.fui-grid__wrap-show.data-v-5a018aeb {
+		opacity: 1 !important;
+}
+.fui-grid.data-v-5a018aeb {
+
+		display: flex;
+		width: 100%;
+
+		flex-direction: row;
+		flex-wrap: wrap;
+}
+.fui-grid__border.data-v-5a018aeb {
+		position: relative;
+
+
+
+
+
+
+
+		z-index: 1;
+		border-left: 0;
+}
+.fui-grid__border.data-v-5a018aeb::before {
+		content: ' ';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 1px;
+		border-top: 1px solid var(--fui-color-border, #EEEEEE);
+		transform-origin: 0 0;
+		transform: scaleY(0.5);
+		z-index: 1;
+}
+.fui-grid__border.data-v-5a018aeb::after {
+		content: ' ';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1px;
+		height: 100%;
+		border-left: 1px solid var(--fui-color-border, #EEEEEE);
+		transform-origin: 0 0;
+		transform: scaleX(0.5);
+}
+
+

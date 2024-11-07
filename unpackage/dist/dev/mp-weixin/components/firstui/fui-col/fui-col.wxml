@@ -1,0 +1,1 @@
+<view class="{{['data-v-d33c0881', a]}}" style="{{'padding-left:' + b + ';' + ('padding-right:' + c)}}"><slot></slot></view>

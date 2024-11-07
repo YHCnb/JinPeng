@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "缺省页",
+  "enablePullDownRefresh": false,
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFE",
+  "usingComponents": {
+    "fui-button": "../../../../components/firstui/fui-button/fui-button",
+    "fui-empty": "../../../../components/firstui/fui-empty/fui-empty"
+  }
+}

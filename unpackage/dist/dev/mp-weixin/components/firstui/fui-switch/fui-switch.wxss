@@ -1,0 +1,100 @@
+
+.fui-switch__input.data-v-27f89589 {
+		display: inline;
+		margin: 0;
+}
+.fui-checkbox__self.data-v-27f89589 {
+		font-size: 0;
+		width: 40rpx;
+		height: 40rpx;
+
+
+
+
+		border-radius: 50%;
+		display: inline-flex;
+		box-sizing: border-box;
+		vertical-align: top;
+
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		position: relative;
+}
+.fui-switch__input-def.data-v-27f89589 {
+		position: relative;
+		width: 52px;
+		height: 32px;
+		border: 1px solid #CCCCCC;
+		outline: 0;
+		border-radius: 16px;
+		box-sizing: border-box;
+		transition: background-color .1s, border .1s;
+}
+.fui-switch__input-before.data-v-27f89589 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 30px;
+		border-radius: 15px;
+		transition: transform .3s
+}
+.fui-switch__input-after.data-v-27f89589 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+		background-color: #fff;
+		box-shadow: 0 0 3px rgba(0, 0, 0, .4);
+		transition: transform .3s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+.fui-switch__input--checked.data-v-27f89589 {
+		transform: scale(0)
+}
+.fui-switch__input--after.data-v-27f89589 {
+		transform: translateX(20px)
+}
+.fui-switch__color.data-v-27f89589 {
+		background: var(--fui-color-primary, #465CFF) !important;
+		border-color: var(--fui-color-primary, #465CFF) !important;
+}
+.wx-switch-input.data-v-27f89589 {
+		margin-right: 0 !important;
+}
+.fui-check__mark.data-v-27f89589 {
+		width: 20rpx;
+		height: 40rpx;
+		border-bottom-style: solid;
+		border-bottom-width: 3px;
+		border-bottom-color: #FFFFFF;
+		border-right-style: solid;
+		border-right-width: 3px;
+		border-right-color: #FFFFFF;
+		transform: rotate(45deg) scale(0.5);
+		transform-origin: 54% 48%;
+
+		box-sizing: border-box;
+}
+.fui-switch__hidden.data-v-27f89589 {
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		opacity: 0;
+
+		width: 100%;
+		height: 100%;
+		border: 0 none;
+		-webkit-appearance: none;
+		appearance: none;
+		z-index: 2;
+}
+.fui-checkbox__disabled.data-v-27f89589 {
+		opacity: 0.6;
+}

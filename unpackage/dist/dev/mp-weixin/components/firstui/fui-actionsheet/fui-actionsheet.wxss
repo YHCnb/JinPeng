@@ -1,0 +1,144 @@
+
+.fui-actionsheet__wrap.data-v-afd32c58 {
+
+		width: 100%;
+		visibility: hidden;
+		min-height: 100rpx;
+
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		transform: translate3d(0, 100%, 0);
+		transition: all 0.25s ease-in-out;
+
+
+
+
+		transform-origin: center center;
+}
+.fui-as__bg-light.data-v-afd32c58 {
+		background-color: #F8F8F8;
+}
+.fui-as__bg-dark.data-v-afd32c58 {
+		background-color: #111111;
+}
+.fui-actionsheet__radius.data-v-afd32c58 {
+		border-top-left-radius: 24rpx;
+		border-top-right-radius: 24rpx;
+
+		overflow: hidden;
+}
+.fui-actionsheet__show.data-v-afd32c58 {
+		transform: translate3d(0, 0, 0);
+		visibility: visible;
+}
+.fui-actionsheet__tips.data-v-afd32c58 {
+
+		width: 100%;
+		display: flex;
+		box-sizing: border-box;
+
+		flex: 1;
+		padding: 40rpx 60rpx;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		font-weight: normal;
+}
+.fui-as__btn-light.data-v-afd32c58 {
+		background-color: #FFFFFF;
+}
+.fui-as__btn-dark.data-v-afd32c58 {
+		background-color: #222222;
+}
+.fui-actionsheet__operate-box.data-v-afd32c58 {
+		padding-bottom: 12rpx;
+}
+.fui-actionsheet__btn.data-v-afd32c58 {
+
+		width: 100%;
+		box-sizing: content-box;
+
+		height: 100rpx;
+
+
+
+
+
+		display: flex;
+
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		/* font-size: 32rpx; */
+		font-weight: normal;
+		position: relative;
+}
+.fui-actionsheet__btn.data-v-afd32c58:active {
+
+
+
+
+
+		background-color: var(--fui-bg-color-hover, rgba(0, 0, 0, 0.2)) !important;
+}
+.fui-actionsheet__btn-last.data-v-afd32c58 {
+
+		padding-bottom: constant(safe-area-inset-bottom);
+		padding-bottom: env(safe-area-inset-bottom);
+}
+.fui-as__divider-light.data-v-afd32c58::before {
+		content: " ";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		border-top: 1px solid var(--fui-color-border, #EEEEEE);
+		transform: scaleY(0.5);
+		transform-origin: 0 0;
+		z-index: 2;
+		pointer-events: none;
+}
+.fui-as__divider-dark.data-v-afd32c58::before {
+		content: " ";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		border-top: 1px solid #333;
+		transform: scaleY(0.5);
+		transform-origin: 0 0;
+		z-index: 2;
+		pointer-events: none;
+}
+.fui-actionsheet__cancel.data-v-afd32c58 {
+
+		padding-bottom: constant(safe-area-inset-bottom);
+		padding-bottom: env(safe-area-inset-bottom);
+}
+.fui-actionsheet__mask.data-v-afd32c58 {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-color: var(--fui-bg-color-mask, rgba(0, 0, 0, 0.6));
+
+
+
+
+
+
+
+		transition: opacity 0.3s ease-in-out;
+		opacity: 0;
+		visibility: hidden;
+}
+.fui-actionsheet__mask-show.data-v-afd32c58 {
+
+		visibility: visible;
+		opacity: 1;
+}

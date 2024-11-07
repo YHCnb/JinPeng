@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "抽屉",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-button": "../../../../components/firstui/fui-button/fui-button",
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell",
+    "fui-drawer": "../../../../components/firstui/fui-drawer/fui-drawer"
+  }
+}

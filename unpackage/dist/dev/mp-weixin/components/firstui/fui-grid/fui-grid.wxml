@@ -1,0 +1,1 @@
+<view class="{{['fui-grid__wrap', 'data-v-5a018aeb', f]}}"><view id="{{a}}" ref="fui_grid" class="{{['fui-grid', 'data-v-5a018aeb', b && 'fui-grid__border', c && 'fui-grid__between']}}" style="{{'border-left-color:' + d + ';' + ('border-top-color:' + e)}}"><slot></slot></view></view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "分割线",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-divider": "../../../../components/firstui/fui-divider/fui-divider",
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon"
+  }
+}

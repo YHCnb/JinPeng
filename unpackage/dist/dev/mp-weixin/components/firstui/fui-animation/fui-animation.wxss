@@ -1,0 +1,14 @@
+
+.fui-popup__animation.data-v-2fecaf62 {
+		transition-timing-function: ease;
+		transition-duration: 0.3s;
+		transition-property: transform, opacity;
+		position: relative;
+		z-index: 99;
+}
+.fui-popup__fade-out.data-v-2fecaf62 {
+		opacity: 0;
+}
+.fui-popup__fade-in.data-v-2fecaf62 {
+		opacity: 1;
+}

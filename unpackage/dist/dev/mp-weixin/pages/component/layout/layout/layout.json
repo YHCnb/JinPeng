@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "栅格布局",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-col": "../../../../components/firstui/fui-col/fui-col",
+    "fui-row": "../../../../components/firstui/fui-row/fui-row"
+  }
+}

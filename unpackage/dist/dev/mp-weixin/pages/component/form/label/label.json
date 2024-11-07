@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "标签",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-radio": "../../../../components/firstui/fui-radio/fui-radio",
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell",
+    "fui-label": "../../../../components/firstui/fui-label/fui-label",
+    "fui-radio-group": "../../../../components/firstui/fui-radio-group/fui-radio-group",
+    "fui-checkbox": "../../../../components/firstui/fui-checkbox/fui-checkbox",
+    "fui-checkbox-group": "../../../../components/firstui/fui-checkbox-group/fui-checkbox-group",
+    "fui-switch": "../../../../components/firstui/fui-switch/fui-switch"
+  }
+}

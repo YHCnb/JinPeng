@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "加载中",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-loading": "../../../../components/firstui/fui-loading/fui-loading"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "复选框",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-checkbox": "../../../../components/firstui/fui-checkbox/fui-checkbox",
+    "fui-label": "../../../../components/firstui/fui-label/fui-label",
+    "fui-checkbox-group": "../../../../components/firstui/fui-checkbox-group/fui-checkbox-group",
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell"
+  }
+}

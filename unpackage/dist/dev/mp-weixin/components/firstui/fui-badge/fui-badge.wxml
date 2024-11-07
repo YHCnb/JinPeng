@@ -1,0 +1,1 @@
+<text wx:if="{{a}}" class="{{['data-v-d3d4490c', c, d, e, f, g]}}" style="{{'top:' + h + ';' + ('right:' + i) + ';' + ('zoom:' + j) + ';' + ('transform:' + k) + ';' + ('margin-top:' + l) + ';' + ('margin-left:' + m) + ';' + ('margin-right:' + n) + ';' + ('width:' + o) + ';' + ('color:' + p) + ';' + ('background:' + q)}}" bindtap="{{r}}">{{b}}</text>

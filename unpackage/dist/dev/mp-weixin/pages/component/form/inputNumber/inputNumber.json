@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "数字输入框",
+  "enablePullDownRefresh": false,
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFE",
+  "usingComponents": {
+    "fui-input-number": "../../../../components/firstui/fui-input-number/fui-input-number",
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon"
+  }
+}

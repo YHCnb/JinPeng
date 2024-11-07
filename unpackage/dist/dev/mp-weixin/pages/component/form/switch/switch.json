@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "开关",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-switch": "../../../../components/firstui/fui-switch/fui-switch",
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell",
+    "fui-label": "../../../../components/firstui/fui-label/fui-label"
+  }
+}

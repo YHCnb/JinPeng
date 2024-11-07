@@ -1,0 +1,17 @@
+"use strict";
+const _imports_0$5 = "/static/images/index/light/img_banner_3x.png";
+const _imports_1$1 = "/static/images/common/img_logo.png";
+const _imports_0$4 = "/static/images/index/light/icon_member_3x.png";
+const _imports_0$3 = "/static/images/common/img_coding_3x.png";
+const _imports_0$2 = "/static/images/common/icon_tabbar_3x.png";
+const _imports_1 = "/static/images/common/icon_tabbar_2x.png";
+const _imports_0$1 = "/static/images/common/icon_tabbar.png";
+const _imports_0 = "/static/images/common/logo.png";
+exports._imports_0 = _imports_0$5;
+exports._imports_0$1 = _imports_0$4;
+exports._imports_0$2 = _imports_0$3;
+exports._imports_0$3 = _imports_0$2;
+exports._imports_0$4 = _imports_0$1;
+exports._imports_0$5 = _imports_0;
+exports._imports_1 = _imports_1$1;
+exports._imports_1$1 = _imports_1;

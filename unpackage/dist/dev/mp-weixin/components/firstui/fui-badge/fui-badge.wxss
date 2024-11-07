@@ -1,0 +1,59 @@
+
+.fui-badge__wrap.data-v-d3d4490c {
+		height: 36rpx;
+		color: #FFFFFF;
+		font-size: 24rpx;
+		line-height: 36rpx;
+		border-radius: 100px;
+
+		min-width: 36rpx !important;
+		display: flex;
+		box-sizing: border-box;
+		white-space: nowrap;
+
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		z-index: 10;
+}
+.fui-badge__dot.data-v-d3d4490c {
+		height: 8px !important;
+		width: 8px !important;
+
+
+
+
+
+		display: inline-block;
+
+
+
+		border-radius: 50%;
+
+		z-index: 10;
+}
+.fui-badge__bg-primary.data-v-d3d4490c {
+		background-color: var(--fui-color-primary, #465CFF) !important;
+}
+.fui-badge__bg-success.data-v-d3d4490c {
+		background-color: var(--fui-color-success, #09BE4F) !important;
+}
+.fui-badge__bg-warning.data-v-d3d4490c {
+		background-color: var(--fui-color-warning, #FFB703) !important;
+}
+.fui-badge__bg-danger.data-v-d3d4490c {
+		background-color: var(--fui-color-danger, #FF2B2B) !important;
+}
+.fui-badge__bg-purple.data-v-d3d4490c {
+		background-color: var(--fui-color-purple, #6831FF) !important;
+}
+.fui-badge__bg-white.data-v-d3d4490c {
+		background-color: var(--fui-color-white, #FFFFFF) !important;
+}
+.fui-badge__text-color.data-v-d3d4490c {
+		color: var(--fui-color-danger, #FF2B2B) !important;
+}
+.fui-badge__absolute.data-v-d3d4490c {
+		position: absolute;
+}

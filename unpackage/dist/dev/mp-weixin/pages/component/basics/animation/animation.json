@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "动画",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-button": "../../../../components/firstui/fui-button/fui-button",
+    "fui-animation": "../../../../components/firstui/fui-animation/fui-animation"
+  }
+}

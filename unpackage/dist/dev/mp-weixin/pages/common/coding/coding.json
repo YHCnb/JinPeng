@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "开发中",
+  "enablePullDownRefresh": false,
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFE",
+  "usingComponents": {
+    "fui-button": "../../../components/firstui/fui-button/fui-button"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "左右间距",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-wing-blank": "../../../../components/firstui/fui-wing-blank/fui-wing-blank"
+  }
+}

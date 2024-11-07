@@ -1,0 +1,1 @@
+<text class="{{['fui-digitalnumbers', 'data-v-f7335a2d', b && 'fui-number__highlight', c && 'fui-number__color']}}" style="{{'color:' + d + ';' + ('font-size:' + e) + ';' + ('font-weight:' + f) + ';' + ('line-height:' + g) + ';' + ('text-decoration:' + h)}}" bindtap="{{i}}">{{a}}</text>

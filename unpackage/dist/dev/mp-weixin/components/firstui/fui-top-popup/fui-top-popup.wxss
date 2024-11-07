@@ -1,0 +1,40 @@
+
+.fui-top__popup-wrap.data-v-a6f9c2a8 {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 996;
+
+		display: flex;
+
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+
+		transition: all ease-in-out .2s;
+		visibility: hidden;
+		overflow: hidden;
+
+		opacity: 0;
+}
+.fui-top__popwrap-show.data-v-a6f9c2a8 {
+		opacity: 1;
+		visibility: visible;
+}
+.fui-top__popup.data-v-a6f9c2a8 {
+
+		width: 100%;
+		transform: translate3d(0, -100%, 0);
+		transition: all 0.3s ease-in-out;
+		min-height: 20rpx;
+		overflow: hidden;
+
+		flex: 1;
+}
+.fui-top__popup-show.data-v-a6f9c2a8 {
+		transform: translate3d(0, 0, 0);
+}
+
+

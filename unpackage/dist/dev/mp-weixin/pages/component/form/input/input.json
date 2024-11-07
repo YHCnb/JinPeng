@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "输入框",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-input": "../../../../components/firstui/fui-input/fui-input",
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon",
+    "fui-button": "../../../../components/firstui/fui-button/fui-button"
+  }
+}

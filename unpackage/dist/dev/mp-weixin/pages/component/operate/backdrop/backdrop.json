@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "遮罩层",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-button": "../../../../components/firstui/fui-button/fui-button",
+    "fui-backdrop": "../../../../components/firstui/fui-backdrop/fui-backdrop"
+  }
+}

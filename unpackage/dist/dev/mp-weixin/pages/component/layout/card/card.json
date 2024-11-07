@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "卡片",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-card": "../../../../components/firstui/fui-card/fui-card"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "加载更多",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-loadmore": "../../../../components/firstui/fui-loadmore/fui-loadmore"
+  }
+}

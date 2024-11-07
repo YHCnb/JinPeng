@@ -1,0 +1,1 @@
+<view class="fui-collapse__wrap data-v-90b150a9" style="{{'background:' + a}}"><slot></slot></view>

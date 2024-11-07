@@ -1,0 +1,14 @@
+
+.fui-label__box.data-v-a3f3906b {
+
+		box-sizing: border-box;
+}
+.fui-label__full.data-v-a3f3906b {
+		flex: 1;
+
+		width: 100%;
+}
+.fui-label__inline.data-v-a3f3906b {
+
+		display: inline-block;
+}

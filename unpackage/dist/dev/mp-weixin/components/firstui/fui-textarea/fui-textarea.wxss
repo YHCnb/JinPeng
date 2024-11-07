@@ -1,0 +1,115 @@
+
+.fui-textarea__wrap.data-v-31fc37c7 {
+
+		width: 100%;
+		box-sizing: border-box;
+		display: flex;
+
+		flex-direction: row;
+		flex: 1;
+		align-items: center;
+		position: relative;
+		border-width: 0;
+}
+.fui-textarea__flex-start.data-v-31fc37c7 {
+		align-items: flex-start !important;
+}
+.fui-textarea__border-top.data-v-31fc37c7 {
+		position: absolute;
+		top: 0;
+
+
+
+
+
+
+		height: 1px;
+		transform: scaleY(0.5);
+		transform-origin: 0 0;
+		z-index: 1;
+}
+.fui-textarea__border-bottom.data-v-31fc37c7 {
+		position: absolute;
+		bottom: 0;
+
+
+
+
+
+		height: 1px;
+		transform: scaleY(0.5);
+		transform-origin: 0 100%;
+		z-index: 1;
+}
+.fui-textarea__required.data-v-31fc37c7 {
+		position: absolute;
+		left: 12rpx;
+
+		height: 30rpx;
+		top: 50%;
+		transform: translateY(-50%);
+		line-height: 1.15;
+}
+.fui-required__flex-start.data-v-31fc37c7 {
+		transform: translateY(0);
+}
+.fui-textarea__label.data-v-31fc37c7 {
+		padding-right: 12rpx;
+
+		flex-shrink: 0;
+}
+.fui-textarea__self.data-v-31fc37c7 {
+		flex: 1;
+
+		width: 100%;
+		overflow: visible;
+		box-sizing: border-box;
+}
+.fui-textarea-placeholder.data-v-31fc37c7 {
+
+		color: var(--fui-color-minor, #ccc);
+		overflow: visible;
+}
+.data-v-31fc37c7 .fui-textarea-placeholder {
+		color: var(--fui-color-minor, #ccc);
+		overflow: visible;
+}
+.fui-textarea__border.data-v-31fc37c7 {
+		border-radius: 4rpx;
+		position: relative;
+		position: absolute;
+		height: 200%;
+		width: 200%;
+		border: 1px solid var(--fui-color-border, #EEEEEE);
+		transform-origin: 0 0;
+		transform: scale(0.5);
+		left: 0;
+		top: 0;
+		border-radius: 8rpx;
+		pointer-events: none;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		user-select: none;
+}
+.fui-textarea__bordercolor.data-v-31fc37c7 {
+		border-color: var(--fui-color-border, #EEEEEE) !important;
+}
+.fui-textarea__background.data-v-31fc37c7 {
+		background: var(--fui-color-border, #EEEEEE) !important;
+}
+.fui-textarea__flex-1.data-v-31fc37c7 {
+		flex: 1;
+}
+.fui-textarea__counter.data-v-31fc37c7 {
+
+		width: 100%;
+
+		padding-top: 8rpx;
+		text-align: right;
+}
+.fui-text__right.data-v-31fc37c7 {
+		text-align: right;
+}
+.fui-textarea__disabled-styl.data-v-31fc37c7 {
+		opacity: .6;
+}

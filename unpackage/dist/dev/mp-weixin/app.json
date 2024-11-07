@@ -1,0 +1,102 @@
+{
+  "pages": [
+    "pages/tabbar/index/index",
+    "pages/tabbar/layout/layout",
+    "pages/tabbar/template/template",
+    "pages/tabbar/my/my",
+    "pages/common/coding/coding"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/component",
+      "pages": [
+        "basics/color/color",
+        "basics/text/text",
+        "basics/numbers/numbers",
+        "basics/icon/icon",
+        "basics/button/button",
+        "basics/footer/footer",
+        "basics/animation/animation",
+        "basics/css/css",
+        "layout/layout/layout",
+        "layout/grid/grid",
+        "layout/list/list",
+        "layout/card/card",
+        "form/input/input",
+        "form/inputNumber/inputNumber",
+        "form/label/label",
+        "form/radio/radio",
+        "form/checkbox/checkbox",
+        "form/switch/switch",
+        "form/textarea/textarea",
+        "operate/actionsheet/actionsheet",
+        "operate/toast/toast",
+        "operate/backdrop/backdrop",
+        "operate/dialog/dialog",
+        "operate/dropdownMenu/dropdownMenu",
+        "operate/dropdownList/dropdownList",
+        "operate/loading/loading",
+        "operate/swipeAction/swipeAction",
+        "nav/pagination/pagination",
+        "nav/segmentedControl/segmentedControl",
+        "nav/tabs/tabs",
+        "nav/drawer/drawer",
+        "nav/bottomPopup/bottomPopup",
+        "nav/topPopup/topPopup",
+        "data/badge/badge",
+        "data/alert/alert",
+        "data/avatar/avatar",
+        "data/tag/tag",
+        "data/collapse/collapse",
+        "data/divider/divider",
+        "data/loadmore/loadmore",
+        "data/empty/empty",
+        "js/utils/utils",
+        "layout/section/section",
+        "layout/whiteSpace/whiteSpace",
+        "layout/wingBlank/wingBlank"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "First UI",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F1F4FA",
+    "backgroundColorTop": "#F1F4FA",
+    "backgroundColorBottom": "#F1F4FA"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#465CFF",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/index/index",
+        "text": "组件",
+        "iconPath": "static/images/tabbar/assembly_default_3x.png",
+        "selectedIconPath": "static/images/tabbar/assembly_selected_3x.png"
+      },
+      {
+        "pagePath": "pages/tabbar/layout/layout",
+        "text": "布局",
+        "iconPath": "static/images/tabbar/layout_default_3x.png",
+        "selectedIconPath": "static/images/tabbar/layout_selected_3x.png"
+      },
+      {
+        "pagePath": "pages/tabbar/template/template",
+        "text": "模板",
+        "iconPath": "static/images/tabbar/mod_default_3x.png",
+        "selectedIconPath": "static/images/tabbar/mod_selected_3x.png"
+      },
+      {
+        "pagePath": "pages/tabbar/my/my",
+        "text": "我的",
+        "iconPath": "static/images/tabbar/my_default_3x.png",
+        "selectedIconPath": "static/images/tabbar/my_selected_3x.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

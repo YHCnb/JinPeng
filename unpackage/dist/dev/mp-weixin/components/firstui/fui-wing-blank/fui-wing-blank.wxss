@@ -1,0 +1,18 @@
+
+.fui-wing__blank-wrap.data-v-0c14cef3 {
+
+		width: 100%;
+		box-sizing: border-box;
+}
+.fui-wing__blank-hidden.data-v-0c14cef3 {
+		overflow: hidden;
+}
+.fui-wing__blank-small.data-v-0c14cef3 {
+		padding: 0 16rpx;
+}
+.fui-wing__blank-default.data-v-0c14cef3 {
+		padding: 0 24rpx;
+}
+.fui-wing__blank-large.data-v-0c14cef3 {
+		padding: 0 32rpx;
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "单选框",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-radio": "../../../../components/firstui/fui-radio/fui-radio",
+    "fui-label": "../../../../components/firstui/fui-label/fui-label",
+    "fui-radio-group": "../../../../components/firstui/fui-radio-group/fui-radio-group",
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell"
+  }
+}

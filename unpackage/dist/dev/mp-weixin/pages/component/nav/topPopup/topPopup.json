@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "顶部弹出层",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-button": "../../../../components/firstui/fui-button/fui-button",
+    "fui-top-popup": "../../../../components/firstui/fui-top-popup/fui-top-popup",
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon",
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell"
+  }
+}

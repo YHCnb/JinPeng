@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "轻提示",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-button": "../../../../components/firstui/fui-button/fui-button",
+    "fui-toast": "../../../../components/firstui/fui-toast/fui-toast",
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon"
+  }
+}

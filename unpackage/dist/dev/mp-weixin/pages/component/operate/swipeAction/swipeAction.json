@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "滑动菜单",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-list-cell": "../../../../components/firstui/fui-list-cell/fui-list-cell",
+    "fui-swipe-action": "../../../../components/firstui/fui-swipe-action/fui-swipe-action",
+    "fui-icon": "../../../../components/firstui/fui-icon/fui-icon",
+    "fui-swipeaction-group": "../../../../components/firstui/fui-swipeaction-group/fui-swipeaction-group"
+  }
+}
