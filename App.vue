@@ -37,7 +37,9 @@
     box-sizing: border-box;
     min-height: 100%;
     height: auto;
-    background-image: url('https://rvwew.space:8666/api/profile/demo/demo/video/bg.png');
+    // background-image: url('https://rvwew.space:8666/api/profile/demo/demo/video/bg.png');
+	// background-image: url('@/static/bg.png');
+	background-image: url('https://bpic.588ku.com/back_pic/23/04/26/39e41c7e6e410ba62ee6e88194930917.png');
     background-size: cover;
   }
   @import '@/static/scss/index.scss'

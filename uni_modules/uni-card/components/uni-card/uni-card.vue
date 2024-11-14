@@ -109,7 +109,7 @@
 			border: {
 				type: Boolean,
 				default: true
-			}
+			},
 		},
 		methods: {
 			onClick(type) {
@@ -141,7 +141,8 @@
 		border-radius: 16px;
 		overflow: hidden;
 		font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
-		background-color: #fff;
+		background-color: #252a34;
+		// background-color: #fff;
 		flex: 1;
 
 		.uni-card__cover {

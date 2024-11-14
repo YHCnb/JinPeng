@@ -87,10 +87,10 @@
     }
   }],
   "tabBar": {
-    "color": "#000000",
-    "selectedColor": "#000000",
+    "color": "#fff",
+    "selectedColor": "#3490de",
     "borderStyle": "white",
-    "backgroundColor": "#ffffff",
+    "backgroundColor": "#252a34",
     "list": [{
       "pagePath": "pages/index",
       "iconPath": "static/images/tabbar/home.png",
@@ -100,12 +100,12 @@
       "pagePath": "pages/aboutus/index",
       "iconPath": "static/images/tabbar/mine.png",
       "selectedIconPath": "static/images/tabbar/mine_.png",
-      "text": "关于我们"
+      "text": "关于"
     }]
   },
   "globalStyle": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "RuoYi",
-    "navigationBarBackgroundColor": "#FFFFFF"
+    "navigationBarBackgroundColor": "#252a34"
   }
 }

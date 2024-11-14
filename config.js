@@ -6,7 +6,7 @@ module.exports = {
   // 应用信息
   appInfo: {
     // 应用名称
-    name: "龙影大模型RadGPT",
+    name: "JinPeng",
     // 应用版本
     version: "1.0",
     // 应用logo

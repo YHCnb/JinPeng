@@ -2,7 +2,7 @@
   <view class="work-container">
     <!-- 照片展示框 -->
     <uni-swiper-dot class="uni-swiper-dot-box" :info="data" :current="current" field="content">
-      <swiper class="swiper-box" :current="swiperDotIndex" @change="changeSwiper">
+      <swiper autoplay=true interval=4000 class="swiper-box" :current="swiperDotIndex" @change="changeSwiper">
         <swiper-item v-for="(item, index) in swiperPictureUrl" :key="index">
           <view class="swiper-item" @click="clickBannerItem(item)">
             <image class="swiperimg" :src="item.image" mode="aspectFill" :draggable="false" />
@@ -13,47 +13,35 @@
 
     <!-- 通告栏1号 -->
     <view class="noticebar-box">
-      <uni-notice-bar show-icon scrollable text="分析医学核磁共振（MRI）诊断描述，龙影大模型（RadGPT）快速生成诊断意见。" />
+      <uni-notice-bar show-icon scrollable color="#30e3ca"
+	  text="✨ 绘梦小精灵新功能上线啦！ ✨只需告诉我们你想画什么，小精灵就能立即为你画出梦幻般的世界！快来试试吧，开启属于你的创意之旅！🎨✨" />
     </view>
 
 
     <!-- 按钮卡片 -->
     <view>
-      <uni-card padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="onClickMRI">
+      <uni-card :border="false" padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="onClickMRI">
         <view class="uni-card__header">
           <view class="uni-card__header-box">
             <view class="uni-card__header-avatar">
               <image class="uni-card__header-avatar-image" :src="iconUrl.url1" mode="aspectFit" />
             </view>
             <view class="uni-card__header-content">
-              <text class="uni-card__header-content-title uni-ellipsis">MRI影像诊断生成</text>
-              <text class="uni-card__header-content-subtitle uni-ellipsis">上传核磁共振影像描述生成诊断</text>
+              <text class="uni-card__header-content-title uni-ellipsis">图像AI风格转化</text>
+              <text class="uni-card__header-content-subtitle uni-ellipsis">上传图像改变风格</text>
             </view>
           </view>
         </view>
       </uni-card>
-      <uni-card padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="onClickCT">
+      <uni-card :border="false" padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="saySorry">
         <view class="uni-card__header">
           <view class="uni-card__header-box">
             <view class="uni-card__header-avatar">
               <image class="uni-card__header-avatar-image" :src="iconUrl.url2" mode="aspectFit" />
             </view>
             <view class="uni-card__header-content">
-              <text class="uni-card__header-content-title uni-ellipsis">CT影像诊断生成</text>
-              <text class="uni-card__header-content-subtitle uni-ellipsis">上传CT影像描述生成诊断</text>
-            </view>
-          </view>
-        </view>
-      </uni-card>
-      <uni-card padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="onClickXray">
-        <view class="uni-card__header">
-          <view class="uni-card__header-box">
-            <view class="uni-card__header-avatar">
-              <image class="uni-card__header-avatar-image" :src="iconUrl.url3" mode="aspectFit" />
-            </view>
-            <view class="uni-card__header-content">
-              <text class="uni-card__header-content-title uni-ellipsis">X线影像诊断生成</text>
-              <text class="uni-card__header-content-subtitle uni-ellipsis">上传X线影像描述生成诊断</text>
+              <text class="uni-card__header-content-title uni-ellipsis">敬请期待</text>
+              <text class="uni-card__header-content-subtitle uni-ellipsis">更多功能正在开发中~</text>
             </view>
           </view>
         </view>
@@ -76,10 +64,10 @@
       </uni-popup>
     </view>
 
-    <uni-popup ref="rightPaper" type="dialog" class="rightPaper-popup">
-      <uni-popup-dialog :type="msgType" showCancel="notshow" confirmText="同意" title="龙影Rad小程序隐私声明"
+    <uni-popup ref="rightPaper" type="dialog">
+      <uni-popup-dialog class="rightPaper-popup" :type="msgType" showCancel="notshow" confirmText="开始体验" title="✨ 绘梦小精灵新功能上线啦！ ✨"
         @confirm="this.clickUpload">
-        <scroll-view scroll-y="true" style="height: 60vh; width: 70vw;max-width: 300px;;">
+        <scroll-view scroll-y="true" style="width: 70vw;max-width: 300px;">
           <view v-html="disclaimerText" class='tips-text'></view>
         </scroll-view>
       </uni-popup-dialog>
@@ -112,52 +100,43 @@
         tipsTextList: [
           '在MRI影像诊断信息生成功能中，用户可以上传报告中的病情描述区域截图，按照视频引导方式，生成Ai诊断报告。',
           '在CT影像诊断信息生成功能中，用户可以上传报告中的病情描述区域截图，按照视频引导方式，生成Ai诊断报告。',
-          '在Xray影像诊断信息生成功能中，用户可以上传报告中的病情描述区域截图，按照视频引导方式，生成Ai诊断报告。',
         ],
         tipsNavList: [
           '/pages/diag/mri/index',
           '/pages/diag/ct/index',
-          '/pages/diag/xray/index',
         ],
         current: 0,
         swiperDotIndex: 0,
         maxLength: 35,
         swiperPictureUrl: [{
-          image: '/static/logo/RadGPT.jpg'
-        }],
+          image: '/static/images/image1.jpg'
+        },{
+          image: '/static/images/image2.jpg'
+        },{
+          image: '/static/images/image3.jpg'
+        }
+		],
 
         dynamicList: [],
         iconUrl: {
           url1: '/static/icon/c1.png',
-          url2: '/static/icon/c2.png',
-          url3: '/static/icon/c3.png',
+          url2: '/static/icon/c3.png',
         },
+		// <p>亲爱的小朋友，欢迎使用“绘梦小精灵”！希望你在这里可以发挥创意，绘制美丽的梦境，享受无尽的乐趣！在你使用这个小程序时，我们会非常小心地保护你的隐私，就像保护珍贵的宝贝一样。</p>
+		// <p>1. 收集的信息：<br>
+		// <p>我们仅会收集你在使用小程序时输入的画画指令，比如你告诉我们“我要画一只彩虹独角兽”或者“画个星星在蓝天上”。这些信息只是为了帮助你创造美丽的画作。</p>
+		// <p>2. 没有私人信息：<br>
+		// <p>我们不会要求你输入任何个人信息，比如名字、地址或者电话号码。我们只关心你的创意和梦想，不会储存你的个人资料。</p>
+		// <p>3. 数据的使用：<br>
+		// <p>你的画作数据仅会用于生成你请求的图画，并且不会与任何其他人共享。你创造的每一幅画都是你独一无二的艺术作品。</p>
+		// <p>4. 安全保障：<br>
+		// <p>我们会用安全的方式存储和处理所有数据，就像给你的画作装上了一个小小的保护罩，确保它们不被外人看到。</p>
+		// <p>5. 关于父母：<br>
+		// <p>为了确保你的隐私得到最好的保护，如果你是小学生，我们会建议家长一起使用这个小程序。</p>
+		// <p>小朋友们，放心大胆地绘画吧！你在“绘梦小精灵”里的每一个创意都将成为美丽的梦想，我们会一直保护它们，直到你完成每一幅画作。</p>
+		// <p>最后更新日期：2024年11月18日</p>
         disclaimerText: `
-        <p>欢迎使用龙影Rad小程序（以下简称“本小程序”）。本隐私声明旨在向用户（以下简称“您”）说明我们如何收集、使用、存储和保护您的个人信息。<br>
-        请在使用本小程序之前仔细阅读本隐私声明。若您对本声明内容有任何疑问或建议，请联系我们。</p>
-        <p>1. 收集的信息：<br>
-        核磁共振影像诊断报告文本：为了进行Ai生成报告结果，本小程序需要您上传核磁共振影像诊断报告文本。<br>
-        我们将严格保护您的报告信息，仅用于生成报告结果，不会用于其他目的。</p>
-        <p>2. 使用的目的：<br>
-        核磁共振影像诊断报告文本：用于Ai生成报告结果，并提供个性化的健康建议。</p>
-        <p>3. 信息存储：<br>
-        我们将严格遵守法律法规的规定，对您的个人信息进行安全存储和保护，存储期限为实现处理目的所必要的最短时间。</p>
-        <p>4. 信息安全：<br>
-        我们将采取合理的安全措施，保护您的个人信息免受未经授权的访问、使用或披露。</p>
-        <p>5. 信息共享与披露：<br>
-        我们承诺不会将您的个人信息分享或转让给任何第三方，除非得到您的明示同意或法律法规要求。<br>
-        在法律法规允许的范围内，我们可能会与合作伙伴共享必要的信息，但我们将以最大努力保护您的个人信息安全。</p>
-        <p>6. 用户权利：<br>
-        您有权随时访问、更正、删除您的个人信息，也可以撤回授权或限制我们对您个人信息的处理，但这可能会影响到您使用本小程序的部分功能。<br>
-        如果您有任何关于个人信息保护的疑问、投诉或建议，欢迎随时联系我们。</p>
-        <p>7. 未成年人保护：<br>
-        我们不会有意收集未满18周岁的未成年人的个人信息，若您是未成年人，请在法定监护人的监护下使用本小程序。</p>
-        <p>8. 变更与通知：<br>
-        我们可能会不定期更新本隐私声明的内容，更新后的隐私声明将在本页面发布，恕不另行通知。您应定期查阅本页面以了解最新隐私声明的内容。</p>
-        <p>如果您继续使用本小程序，即表示您同意本隐私声明的全部内容。感谢您的信任与支持！</p>
-        <p>如有任何疑问或需要进一步了解，可联系我们：<br>
-        邮箱地址：longfei_chen@bit.edu.cn</p>
-        <p>最后更新日期：2024年2月22日</p>
+		用心聆听你的梦话，"绘梦小精灵"现在可以快速将你的想法变成美丽的画作！🎨只需告诉我们你想画什么，小精灵‍就能立即为你绘制出一个梦幻般的世界！快来试试吧，开启属于你的创意之旅！🚀🌟
         `,
       };
     },
@@ -226,7 +205,7 @@
       },
       getMore() {
         uni.showToast({
-          title: `使用须知:报告由龙影大模型（RadGPT）生成，报告结果仅供医学参考 `,
+          title: `图像由AI接口生成，与小程序无关`,
           icon: 'none',
           duration: 3000,
         })
@@ -264,7 +243,7 @@
   .swiper-box {
     margin-left: 40rpx;
     margin-right: 40rpx;
-    height: 300rpx;
+    height: 350rpx;
     /* 弧度改这个无效 */
     border-radius: 16px;
   }
@@ -277,8 +256,8 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    height: 300rpx;
-    line-height: 300rpx;
+    height: 350rpx;
+    line-height: 350rpx;
   }
 
   .swiperimg {
@@ -307,6 +286,7 @@
     margin-left: 30rpx;
     margin-right: 30rpx;
     margin-top: 20px;
+	background-color: #252a34;
     /* 弧度改这个无效 */
     border-radius: 16px;
   }
@@ -351,6 +331,7 @@
     align-items: center;
     padding: 5px;
     overflow: hidden;
+/* 	background-color: #40514e; */
   }
 
   .uni-card__header-box {
@@ -393,7 +374,7 @@
     font-size: large;
     /* font-size: 4vw; */
     font-weight: bold;
-    color: #2979FF;
+    color: #30e3ca;
     /* line-height: 5vw; */
     letter-spacing: 1px;
   }
@@ -402,7 +383,7 @@
     font-size: x-small;
     /* font-size: 3vw; */
     /* margin-top: 1vw; */
-    color: #6a6a6a;
+    color: #11999e;
   }
 
   .pop-up-text {
@@ -425,7 +406,7 @@
     /* font-size: 14px; */
     letter-spacing: 0px;
     word-spacing: 0px;
-    color: #000000;
+    color: #fff;
     text-decoration: none;
     font-style: normal;
     font-variant: normal;

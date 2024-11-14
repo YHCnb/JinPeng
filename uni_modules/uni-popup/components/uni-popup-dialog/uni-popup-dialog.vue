@@ -185,7 +185,7 @@
   .uni-popup-dialog {
     width: 360px;
     border-radius: 11px;
-    background-color: #fff;
+    background-color: #40514e;
   }
 
   .uni-dialog-title {
@@ -200,6 +200,7 @@
   .uni-dialog-title-text {
     font-size: 16px;
     font-weight: 500;
+	color: #fff;
   }
 
   .uni-dialog-content {
@@ -214,7 +215,7 @@
 
   .uni-dialog-content-text {
     font-size: 14px;
-    color: #6C6C6C;
+    color: #fff;
   }
 
   .uni-dialog-button-group {
@@ -222,7 +223,7 @@
     display: flex;
     /* #endif */
     flex-direction: row;
-    border-top-color: #f5f5f5;
+    border-top-color: #000;
     border-top-style: solid;
     border-top-width: 1px;
   }
@@ -251,7 +252,7 @@
   }
 
   .uni-button-color {
-    color: #007aff;
+    color: #fff;
   }
 
   .uni-dialog-input {
