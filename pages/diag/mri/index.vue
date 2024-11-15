@@ -1,45 +1,43 @@
 <template>
-  <view class="app-container">
-    <text class="title">风格变换魔法</text>
-
-    <!-- 卡通元素装饰 -->
-    <image src="/static/icon/小画家.jpg" class="painter-icon" mode="aspectFit" />
-    <image src="/static/icon/机器人画家.jpg" class="robot_painter-icon" mode="aspectFit" />
-
-    <!-- 图片上传区域 -->
-    <view class="upload-container">
-      <view class="button-group">
-        <button @click="uploadImage" class="upload-button">上传图片</button>
-        <button @click="takePhoto" class="camera-button">拍照上传</button>
-      </view>
-    </view>
-
-    <!-- 图片显示区域 -->
-    <view class="images-display">
-      <!-- 原始图片显示 -->
-      <view v-if="originalImage" class="image-container">
-        <text class="image-label">原始图片</text>
-        <image :src="originalImageSrc" mode="aspectFit" class="image-display"></image>
-      </view>
-
-      <!-- 转换后的图片显示 -->
-      <view v-if="convertedImage" class="image-container">
-        <text class="image-label">转换后的图片</text>
-        <image :src="convertedImageSrc" mode="aspectFit" class="image-display"></image>
-        <button @click="downloadImage" class="download-button">下载图片</button>
-      </view>
-    </view>
-
-    <!-- 风格选择器 -->
-    <picker mode="selector" :range="styleOptions" @change="onStyleChange">
-      <view class="picker">
-        当前风格：{{ styleOptions[styleIndex] }}
-      </view>
-    </picker>
-
-    <!-- 转换按钮 -->
-    <button v-if="originalImage" @click="convertImage" class="convert-button">风格转换</button>
-  </view>
+	<view class="container">
+	  <view class="main-container">
+	  	<text class="title">风格变换魔法</text>
+	  	
+	  	<!-- 图片上传区域 -->
+	  	<view class="upload-container">
+	  			<view class="button-group">
+	  			  <button @click="uploadImage" class="upload-button">上传图片</button>
+	  			  <button @click="takePhoto" class="camera-button">拍照上传</button>
+	  			</view>
+	  	</view>
+	  	
+	  	<!-- 图片显示区域 -->
+	  	<view class="images-display">
+	  			<!-- 原始图片显示 -->
+	  			<view v-if="originalImage" class="image-container">
+	  			  <text class="image-label">原始图片</text>
+	  			  <image :src="originalImageSrc" mode="aspectFit" class="image-display"></image>
+	  			</view>
+	  	
+	  			<!-- 转换后的图片显示 -->
+	  			<view v-if="convertedImage" class="image-container">
+	  			  <text class="image-label">转换后的图片</text>
+	  			  <image :src="convertedImageSrc" mode="aspectFit" class="image-display"></image>
+	  			  <button @click="downloadImage" class="download-button">下载图片</button>
+	  			</view>
+	  	</view>
+	  	
+	  	<!-- 风格选择器 -->
+	  	<picker mode="selector" :range="styleOptions" @change="onStyleChange">
+	  			<view class="picker">
+	  			  当前风格：{{ styleOptions[styleIndex] }}
+	  			</view>
+	  	</picker>
+	  	
+	  	<!-- 转换按钮 -->
+	  	<button v-if="originalImage" @click="convertImage" class="convert-button">风格转换</button>
+	  </view>
+	</view>
 </template>
 
 <script>
@@ -318,122 +316,167 @@ export default {
 
 
 <style>
-/* 确保页面和根容器高度为 100% */
-page, .app-container {
-  height: 100%;
-}
+	/* 确保页面和根容器高度为 100% */
+	page {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	min-height: 100%;
+	height: auto;
+	}
 
-.app-container {
-  background-color: #f0f8ff;
-  padding: 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
+	view {
+	font-size: 14px;
+	line-height: inherit;
+	}
 
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  color: #ff4500;
-  margin-bottom: 20px;
-}
+	/* 最外层容器 */
+	.container {
+	  margin-top: 200rpx;
+	}
 
-/* 调整图片的大小和位置 */
-.painter-icon {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 80px;
-  height: 80px; /* 设置高度 */
-  pointer-events: none; /* 使图片不拦截点击事件 */
-  z-index: 1; /* 确保图片层级较低 */
-}
+	/* 主容器 */
+	.main-container {
+		margin-bottom: 40rpx;
+		margin-left: 40rpx;
+		margin-right: 40rpx;
+		border-radius: 16px;
+		background-color: #252a34;
+		padding-bottom: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
-.robot_painter-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 80px;
-  height: 80px; /* 设置高度 */
-  pointer-events: none; /* 使图片不拦截点击事件 */
-  z-index: 1; /* 确保图片层级较低 */
-}
+	.title {
+	  font-size: 24px;
+	  font-weight: bold;
+	  text-align: center;
+	  color: #ff4500;
+	  margin-bottom: 20px;
+	}
 
-.upload-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  position: relative;
-  z-index: 2; /* 确保按钮在图片之上 */
-}
+	/* 调整图片的大小和位置 */
+	.painter-icon {
+	  position: absolute;
+	  top: 10px;
+	  left: 10px;
+	  width: 80px;
+	  height: 80px; /* 设置高度 */
+	  pointer-events: none; /* 使图片不拦截点击事件 */
+	  z-index: 1; /* 确保图片层级较低 */
+	}
 
-.button-group {
-  display: flex;
-}
+	.robot_painter-icon {
+	  position: absolute;
+	  top: 10px;
+	  right: 10px;
+	  width: 80px;
+	  height: 80px; /* 设置高度 */
+	  pointer-events: none; /* 使图片不拦截点击事件 */
+	  z-index: 1; /* 确保图片层级较低 */
+	}
 
-.button-group button {
-  padding: 10px;
-  margin: 5px;
-  background-color: #2979FF;
-  color: white;
-  border-radius: 15px;
-  box-shadow: 0 5px #999;
-}
+	.upload-container {
+	  display: flex;
+	  justify-content: center;
+	  margin: 20px 0;
+	  position: relative;
+	  z-index: 2; /* 确保按钮在图片之上 */
+	}
 
-.images-display {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+	.button-group {
+	  display: flex;
+	}
 
-.image-container {
-  width: 90%;
-  text-align: center;
-  margin-bottom: 20px;
-}
+	.button-group button {
+	  padding: 10px;
+	  margin: 5px;
+	  background-color: #2979FF;
+	  color: white;
+	  border-radius: 15px;
+	  box-shadow: 0 5px #999;
+	}
 
-.image-label {
-  font-size: 16px;
-  color: #333;
-}
+	/* 图片显示区域 */
+	.images-display {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 20px; /* 图片之间的间距 */
+	  padding: 20px;
+	  align-items: center;
+	  justify-content: center;
+	}
 
-.image-display {
-  width: 100%;
-  height: auto;
-  margin: 10px auto;
-  border: 2px dashed #FFD700;
-  border-radius: 10px;
-}
+	/* 图片容器 */
+	.image-container {
+	  width: 100%;
+	  max-width: 600px; /* 最大宽度，保持页面美观 */
+	  padding: 20px;
+	  border: 1px solid #ddd;
+	  border-radius: 8px;
+	  background-color: #f9f9f9;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  box-sizing: border-box;
+	  transition: all 0.3s ease;
+	}
 
-.picker {
-  background-color: #FFF;
-  color: #000;
-  padding: 10px;
-  margin: 10px 0;
-  text-align: center;
-  border-radius: 15px;
-}
+	/* 图片标签 */
+	.image-label {
+	  font-size: 16px;
+	  font-weight: bold;
+	  margin-bottom: 10px;
+	  color: #333;
+	}
 
-.convert-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  margin: 20px 0;
-  display: block;
-  border-radius: 15px;
-  box-shadow: 0 5px #999;
-}
+	/* 图片样式，确保图片自适应容器并保持比例 */
+	.image-display {
+	  width: 100%;
+	  height: 100px; /* 预设高度，可以根据需要调整 */
+	  object-fit: contain; /* 保持图片比例 */
+	  background-color: #e0e0e0; /* 图片未加载时的占位颜色 */
+	  border-radius: 4px;
+	}
 
-.download-button {
-  background-color: #FF9800;
-  color: white;
-  padding: 10px;
-  margin: 10px 0;
-  display: block;
-  border-radius: 15px;
-  box-shadow: 0 5px #999;
-}
+	/* 下载按钮 */
+	.download-button {
+	  margin-top: 15px;
+	  padding: 8px 16px;
+	  background-color: #007bff;
+	  color: white;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  font-size: 14px;
+	  transition: background-color 0.3s ease;
+	}
+
+	/* 下载按钮悬浮效果 */
+	.download-button:hover {
+	  background-color: #0056b3;
+	}
+
+
+	.picker {
+	  background-color: #FFF;
+	  color: #000;
+	  padding: 10px;
+	  margin: 10px 0;
+	  text-align: center;
+	  border-radius: 15px;
+	}
+
+	.convert-button {
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 10px;
+	  margin: 20px 0;
+	  display: block;
+	  border-radius: 15px;
+	  box-shadow: 0 5px #999;
+	}
 </style>
