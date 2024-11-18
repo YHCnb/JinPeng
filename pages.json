@@ -12,13 +12,13 @@
     // }, {
     "path": "pages/index",
     "style": {
-      "navigationBarTitleText": "龙影RadGPT移动端框架",
+      "navigationBarTitleText": "绘梦小精灵",
       "navigationStyle": "custom"
     }
   }, {
     "path": "pages/diag/mri/index",
     "style": {
-      "navigationBarTitleText": "MRI影像诊断生成"
+      "navigationBarTitleText": "绘梦小精灵——风格转化"
     }
   }, {
     "path": "pages/diag/ct/index",

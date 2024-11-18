@@ -1,42 +1,38 @@
 <template>
 	<view class="container">
-	  <view class="main-container">
-	  	<text class="title">风格变换魔法</text>
-	  	
-	  	<!-- 图片上传区域 -->
-	  	<view class="upload-container">
-	  			<view class="button-group">
-	  			  <button @click="uploadImage" class="upload-button">上传图片</button>
-	  			  <button @click="takePhoto" class="camera-button">拍照上传</button>
-	  			</view>
+<!-- 	  <view class="main-container">
+		
+	  </view> -->
+	  
+	  <!-- 风格选择器 -->
+	  <picker mode="selector" :range="styleOptions" @change="onStyleChange">
+	  	<view class="picker">
+	  	  {{ styleOptions[styleIndex] }}
 	  	</view>
-	  	
-	  	<!-- 图片显示区域 -->
-	  	<view class="images-display">
-	  			<!-- 原始图片显示 -->
-	  			<view v-if="originalImage" class="image-container">
-	  			  <text class="image-label">原始图片</text>
-	  			  <image :src="originalImageSrc" mode="aspectFit" class="image-display"></image>
-	  			</view>
-	  	
-	  			<!-- 转换后的图片显示 -->
-	  			<view v-if="convertedImage" class="image-container">
-	  			  <text class="image-label">转换后的图片</text>
-	  			  <image :src="convertedImageSrc" mode="aspectFit" class="image-display"></image>
-	  			  <button @click="downloadImage" class="download-button">下载图片</button>
-	  			</view>
-	  	</view>
-	  	
-	  	<!-- 风格选择器 -->
-	  	<picker mode="selector" :range="styleOptions" @change="onStyleChange">
-	  			<view class="picker">
-	  			  当前风格：{{ styleOptions[styleIndex] }}
-	  			</view>
-	  	</picker>
-	  	
-	  	<!-- 转换按钮 -->
-	  	<button v-if="originalImage" @click="convertImage" class="convert-button">风格转换</button>
+	  </picker>
+	  
+	  <!-- 原始图片显示 -->
+	  <div class="card">
+	  	<div class="card__content">
+	  		<image :src="convertedImageSrc || originalImageSrc" mode="aspectFit" class="image-display"></image>
+	  	</div>
+	  </div>
+	  
+	  <view class="button-group">
+	    <button @click="uploadImage">
+	      <span class="text">上传图片</span>
+	    </button>
+	    <!-- <button @click="takePhoto">
+	      <span class="text">拍照上传</span>
+	    </button> -->
+		<button @click="convertImage">
+			<span class="text">风格转换</span>
+		</button>
 	  </view>
+	  
+	  <button class= "download-button" v-if="convertedImage" @click="downloadImage">
+	    <span class="text">下载图片</span>
+	  </button>
 	</view>
 </template>
 
@@ -45,9 +41,9 @@ export default {
   data() {
     return {
       originalImage: '', // 原始图片的 Base64 数据
-      originalImageSrc: '', // 用于显示的原始图片本地路径
+      originalImageSrc: '', // 原始图片本地路径
       convertedImage: '', // 转换后图片的 Base64 数据
-      convertedImageSrc: '', // 用于显示的转换后图片本地路径
+      convertedImageSrc: '', // 转换后图片本地路径
       accessToken: '', // 百度 API 的访问令牌
       styleOptions: ['cartoon', 'pencil', 'color_pencil', 'warm', 'wave', 'lavender', 'mononoke', 'scream', 'gothic'], // 风格选项
       styleIndex: 0, // 当前选择的风格索引
@@ -109,13 +105,16 @@ export default {
               this.originalImage = cleanedBase64;
 
               // 将 Base64 数据写入到本地文件
-              const saveFilePath = `${uni.env.USER_DATA_PATH}/original_image.jpg`;
+              const randomId = Math.random().toString(36).substr(2, 9); // 生成短随机字符串
+              const saveFilePath = `${uni.env.USER_DATA_PATH}/original_image_${randomId}.jpg`;
               fileSystemManager.writeFile({
                 filePath: saveFilePath,
                 data: cleanedBase64,
                 encoding: 'base64',
                 success: () => {
                   this.originalImageSrc = saveFilePath;
+				  this.convertedImage = "";
+				  this.convertedImageSrc = "";
                   console.log('原始图片已保存到', saveFilePath);
                 },
                 fail: (err) => {
@@ -162,13 +161,16 @@ export default {
               this.originalImage = cleanedBase64;
 
               // 将 Base64 数据写入到本地文件
-              const saveFilePath = `${uni.env.USER_DATA_PATH}/original_image.jpg`;
+			  const randomId = Math.random().toString(36).substr(2, 9); // 生成短随机字符串
+              const saveFilePath = `${uni.env.USER_DATA_PATH}/original_image_${randomId}.jpg`;
               fileSystemManager.writeFile({
                 filePath: saveFilePath,
                 data: cleanedBase64,
                 encoding: 'base64',
                 success: () => {
                   this.originalImageSrc = saveFilePath;
+				  this.convertedImage = "";
+				  this.convertedImageSrc = "";
                   console.log('原始图片已保存到', saveFilePath);
                 },
                 fail: (err) => {
@@ -201,6 +203,9 @@ export default {
     // 风格选择器变化
     onStyleChange(e) {
       this.styleIndex = parseInt(e.detail.value, 10);
+	  if (this.originalImage) {
+		  this.convertImage();
+	  }
     },
     // 调用风格转换接口
     async convertImage() {
@@ -238,14 +243,15 @@ export default {
               this.convertedImage = cleanedBase64;
 
               // 将转换后的图片保存到本地文件
-              const filePath = `${uni.env.USER_DATA_PATH}/converted_image.png`;
+              const randomId = Math.random().toString(36).substr(2, 9); // 生成短随机字符串
+              const filePath = `${uni.env.USER_DATA_PATH}/converted_image_${randomId}.png`;
               const fileSystemManager = uni.getFileSystemManager();
               fileSystemManager.writeFile({
                 filePath,
                 data: cleanedBase64,
                 encoding: 'base64',
                 success: () => {
-                  this.convertedImageSrc = filePath;
+                  this.convertedImageSrc = filePath; // 先清空值，确保 Vue 检测到变化
                   console.log('转换后的图片已保存到', filePath);
                   uni.hideLoading();
                 },
@@ -323,6 +329,8 @@ export default {
 	box-sizing: border-box;
 	min-height: 100%;
 	height: auto;
+	/* 水平居中 */
+	align-items: center;
 	}
 
 	view {
@@ -332,7 +340,7 @@ export default {
 
 	/* 最外层容器 */
 	.container {
-	  margin-top: 200rpx;
+	  margin-top: 100rpx;
 	}
 
 	/* 主容器 */
@@ -349,134 +357,104 @@ export default {
 		justify-content: center;
 	}
 
-	.title {
-	  font-size: 24px;
-	  font-weight: bold;
-	  text-align: center;
-	  color: #ff4500;
-	  margin-bottom: 20px;
-	}
-
-	/* 调整图片的大小和位置 */
-	.painter-icon {
-	  position: absolute;
-	  top: 10px;
-	  left: 10px;
-	  width: 80px;
-	  height: 80px; /* 设置高度 */
-	  pointer-events: none; /* 使图片不拦截点击事件 */
-	  z-index: 1; /* 确保图片层级较低 */
-	}
-
-	.robot_painter-icon {
-	  position: absolute;
-	  top: 10px;
-	  right: 10px;
-	  width: 80px;
-	  height: 80px; /* 设置高度 */
-	  pointer-events: none; /* 使图片不拦截点击事件 */
-	  z-index: 1; /* 确保图片层级较低 */
-	}
-
-	.upload-container {
-	  display: flex;
-	  justify-content: center;
-	  margin: 20px 0;
-	  position: relative;
-	  z-index: 2; /* 确保按钮在图片之上 */
-	}
-
 	.button-group {
 	  display: flex;
-	}
-
-	.button-group button {
-	  padding: 10px;
-	  margin: 5px;
-	  background-color: #2979FF;
-	  color: white;
-	  border-radius: 15px;
-	  box-shadow: 0 5px #999;
-	}
-
-	/* 图片显示区域 */
-	.images-display {
-	  display: flex;
-	  flex-direction: column;
-	  gap: 20px; /* 图片之间的间距 */
-	  padding: 20px;
-	  align-items: center;
-	  justify-content: center;
-	}
-
-	/* 图片容器 */
-	.image-container {
-	  width: 100%;
-	  max-width: 600px; /* 最大宽度，保持页面美观 */
-	  padding: 20px;
-	  border: 1px solid #ddd;
-	  border-radius: 8px;
-	  background-color: #f9f9f9;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  justify-content: center;
-	  box-sizing: border-box;
-	  transition: all 0.3s ease;
-	}
-
-	/* 图片标签 */
-	.image-label {
-	  font-size: 16px;
-	  font-weight: bold;
-	  margin-bottom: 10px;
-	  color: #333;
 	}
 
 	/* 图片样式，确保图片自适应容器并保持比例 */
 	.image-display {
 	  width: 100%;
-	  height: 100px; /* 预设高度，可以根据需要调整 */
+	  height: 100%;
 	  object-fit: contain; /* 保持图片比例 */
-	  background-color: #e0e0e0; /* 图片未加载时的占位颜色 */
-	  border-radius: 4px;
+	  background-color: #252a34; /* 图片未加载时的占位颜色 */
+	  border-radius: 10px;
 	}
-
-	/* 下载按钮 */
-	.download-button {
-	  margin-top: 15px;
-	  padding: 8px 16px;
-	  background-color: #007bff;
-	  color: white;
-	  border: none;
-	  border-radius: 4px;
-	  cursor: pointer;
-	  font-size: 14px;
-	  transition: background-color 0.3s ease;
-	}
-
-	/* 下载按钮悬浮效果 */
-	.download-button:hover {
-	  background-color: #0056b3;
-	}
-
 
 	.picker {
-	  background-color: #FFF;
-	  color: #000;
+	  background-color: #252a34;
+	  color: #30e3ca;
 	  padding: 10px;
 	  margin: 10px 0;
 	  text-align: center;
 	  border-radius: 15px;
+	  font-size: 16px;
+	  font-weight: bold;
+	}
+	
+	/* From www.lingdaima.com */
+	button {
+	 align-items: center;
+	 background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+	 border: 0;
+	 border-radius: 8px;
+	 box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+	 box-sizing: border-box;
+	 color: #FFFFFF;
+	 display: flex;
+	 font-family: Phantomsans, sans-serif;
+	 font-size: 18px;
+	 justify-content: center;
+	 line-height: 1em;
+	 max-width: 100%;
+	 min-width: 140px;
+	 padding: 3px;
+	 text-decoration: none;
+	 user-select: none;
+	 -webkit-user-select: none;
+	 touch-action: manipulation;
+	 white-space: nowrap;
+	 cursor: pointer;
+	 transition: all .3s;
+	}
+	
+	button:active,
+	button:hover {
+	 outline: 0;
+	}
+	
+	button span {
+	 background-color: rgb(5, 6, 45);
+	 padding: 16px 24px;
+	 border-radius: 6px;
+	 width: 100%;
+	 height: 100%;
+	 transition: 300ms;
+	}
+	
+	button:hover span {
+	 background: none;
+	}
+	
+	button:active {
+	 transform: scale(0.9);
+	}
+	
+	.download-button {
+	  margin-top: 10px;
+	}
+	
+	.card {
+	 width: 80vw;
+	 height: 100vw;
+	 padding: 6px;
+	 border-radius: 20px;
+	 box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+	 background-image: conic-gradient(
+			#488cfb,
+			#29dbbc,
+			#ddf505,
+			#ff9f0e,
+			#e440bb,
+			#655adc,
+			#488cfb
+		);
+	}
+	
+	.card__content {
+	 background: rgb(5, 6, 45);
+	 border-radius: 17px;
+	 width: 100%;
+	 height: 100%;
 	}
 
-	.convert-button {
-	  background-color: #4CAF50;
-	  color: white;
-	  padding: 10px;
-	  margin: 20px 0;
-	  display: block;
-	  border-radius: 15px;
-	  box-shadow: 0 5px #999;
-	}
 </style>
