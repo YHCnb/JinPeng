@@ -50,7 +50,7 @@
     <!-- 提示窗 -->
     <view>
       <uni-popup ref="tips" type="dialog">
-        <uni-popup-dialog :type="info" confirmText="开始体验" title="使用方法" @confirm="dialogConfirm">
+        <uni-popup-dialog :type="info" confirmText="开始体验" title="✨使用方法✨" @confirm="dialogConfirm">
           <view class="pop-up-box" padding="0px" spacing="0px">
             <view class="pop-up-video">
               <video class="vbox" id="myVideo" :src="tipsVideoList[tipsIndex]" @error="videoErrorCallback" :object-fit="contain"
@@ -94,12 +94,12 @@
         intro: [''],
         tipsIndex: 0,
         tipsVideoList: [
-          config.baseUrl + "/profile/demo/demo/video/demo.mp4",
+          "https://env-00jxhjunlk7s.normal.cloudstatic.cn/video1.mp4?expire_at=1731986918&er_sign=e295aaf36395e3f96d49a6d07b6b80c3",
           config.baseUrl + "/profile/demo/demo/video/demo.mp4",
         ],
         tipsTextList: [
-          '在MRI影像诊断信息生成功能中，用户可以上传报告中的病情描述区域截图，按照视频引导方式，生成Ai诊断报告。',
-          '在CT影像诊断信息生成功能中，用户可以上传报告中的病情描述区域截图，按照视频引导方式，生成Ai诊断报告。',
+          '上传图片，选择风格，小精灵秒变艺术大师！油画、素描、二次元任你挑！快来让照片焕发艺术魅力吧！✨🖌️',
+          '上传图片，选择风格，小精灵秒变艺术大师！油画、素描、二次元任你挑！快来让照片焕发艺术魅力吧！✨🖌',
         ],
         tipsNavList: [
           '/pages/diag/mri/index',
