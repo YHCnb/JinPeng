@@ -20,24 +20,37 @@
 
     <!-- 按钮卡片 -->
     <view>
-      <uni-card :border="false" padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="onClickMRI">
+      <uni-card :border="false" padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="onClickCT">
         <view class="uni-card__header">
           <view class="uni-card__header-box">
             <view class="uni-card__header-avatar">
               <image class="uni-card__header-avatar-image" :src="iconUrl.url1" mode="aspectFit" />
             </view>
             <view class="uni-card__header-content">
-              <text class="uni-card__header-content-title uni-ellipsis">图像AI风格转化</text>
-              <text class="uni-card__header-content-subtitle uni-ellipsis">上传图像改变风格</text>
+              <text class="uni-card__header-content-title uni-ellipsis">AI作画</text>
+              <text class="uni-card__header-content-subtitle uni-ellipsis">AI画作，一键生成~</text>
             </view>
           </view>
         </view>
       </uni-card>
+	  <uni-card :border="false" padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="onClickMRI">
+	    <view class="uni-card__header">
+	      <view class="uni-card__header-box">
+	        <view class="uni-card__header-avatar">
+	          <image class="uni-card__header-avatar-image" :src="iconUrl.url2" mode="aspectFit" />
+	        </view>
+	        <view class="uni-card__header-content">
+	          <text class="uni-card__header-content-title uni-ellipsis">图像AI风格转化</text>
+	          <text class="uni-card__header-content-subtitle uni-ellipsis">上传图像改变风格~</text>
+	        </view>
+	      </view>
+	    </view>
+	  </uni-card>
       <uni-card :border="false" padding="0px 20px 0px 20px" spacing="0px" margin="20px 25px" @click="saySorry">
         <view class="uni-card__header">
           <view class="uni-card__header-box">
             <view class="uni-card__header-avatar">
-              <image class="uni-card__header-avatar-image" :src="iconUrl.url2" mode="aspectFit" />
+              <image class="uni-card__header-avatar-image" :src="iconUrl.url3" mode="aspectFit" />
             </view>
             <view class="uni-card__header-content">
               <text class="uni-card__header-content-title uni-ellipsis">敬请期待</text>
@@ -95,7 +108,7 @@
         tipsIndex: 0,
         tipsVideoList: [
           "https://env-00jxhjunlk7s.normal.cloudstatic.cn/video1.mp4?expire_at=1731986918&er_sign=e295aaf36395e3f96d49a6d07b6b80c3",
-          config.baseUrl + "/profile/demo/demo/video/demo.mp4",
+          "https://env-00jxhjunlk7s.normal.cloudstatic.cn/video2.mp4?expire_at=1732620196&er_sign=71f6aaac2ad944e240f490e3345b19bf",
         ],
         tipsTextList: [
           '上传图片，选择风格，小精灵秒变艺术大师！油画、素描、二次元任你挑！快来让照片焕发艺术魅力吧！✨🖌️',
@@ -120,7 +133,8 @@
         dynamicList: [],
         iconUrl: {
           url1: '/static/icon/c1.png',
-          url2: '/static/icon/c3.png',
+          url2: '/static/icon/c2.png',
+		  url3: '/static/icon/c3.png',
         },
 		// <p>亲爱的小朋友，欢迎使用“绘梦小精灵”！希望你在这里可以发挥创意，绘制美丽的梦境，享受无尽的乐趣！在你使用这个小程序时，我们会非常小心地保护你的隐私，就像保护珍贵的宝贝一样。</p>
 		// <p>1. 收集的信息：<br>

@@ -340,7 +340,7 @@ export default {
 
 	/* 最外层容器 */
 	.container {
-	  margin-top: 100rpx;
+	  margin-top: 50rpx;
 	}
 
 	/* 主容器 */

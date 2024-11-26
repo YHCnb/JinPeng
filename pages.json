@@ -23,7 +23,7 @@
   }, {
     "path": "pages/diag/ct/index",
     "style": {
-      "navigationBarTitleText": "CT影像诊断生成"
+      "navigationBarTitleText": "绘梦小精灵——AI作画"
     }
   }, {
     "path": "pages/diag/xray/index",

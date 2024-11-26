@@ -231,7 +231,7 @@ export default {
 			type: Object,
 			default() {
 				return {
-					color: '#333',
+					color: '#F7F6F6',
 					backgroundColor: '#fff',
 					disableColor: '#F7F6F6',
 					borderColor: '#e5e5e5'
@@ -301,7 +301,7 @@ export default {
 			return obj2strStyle({
 				'border-color': borderColor || '#e5e5e5',
 				// 这里魔改直接把背景颜色固定
-				'background-color': '#f4f5f7',
+				'background-color': '#252a34',
 			});
 		},
 		// input右侧样式
