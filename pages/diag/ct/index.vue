@@ -348,21 +348,38 @@ export default {
     // 下载转换后的图片
     downloadImage() {
       if (this.convertedImageSrc) {
-        uni.saveImageToPhotosAlbum({
-          filePath: this.convertedImageSrc,
-          success: () => {
-            uni.showToast({
-              title: '图片已保存',
-              icon: 'success',
-            });
-          },
-          fail: () => {
-            uni.showToast({
-              title: '保存失败',
-              icon: 'none',
-            });
-          },
-        });
+        // uni.saveImageToPhotosAlbum({
+        //   filePath: this.convertedImageSrc,
+        //   success: () => {
+        //     uni.showToast({
+        //       title: '图片已保存',
+        //       icon: 'success',
+        //     });
+        //   },
+        //   fail: () => {
+        //     uni.showToast({
+        //       title: '保存失败',
+        //       icon: 'none',
+        //     });
+        //   },
+        // });
+		wx.getImageInfo({
+		  src: this.convertedImageSrc,
+		  success: res=> {
+			  wx.saveImageToPhotosAlbum({
+				filePath: res.path,
+				success(res) {
+				  wx.showToast({ title: '保存图片成功！', })
+				},
+				fail(err) {
+				  wx.showToast({ title: '保存图片失败！', })
+				}
+			  })
+		  },
+		  fail: err => {
+			console.log(err,'err')
+		  }
+		})
       } else {
         uni.showToast({
           title: '无可下载的图片',
