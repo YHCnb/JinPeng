@@ -280,13 +280,13 @@ export default {
 	
     // 调用风格转换接口
     async convertImage() {
-      if (!this.originalImage) {
-        uni.showToast({
-          title: '请先选择图片',
-          icon: 'none',
-        });
-        return;
-      }
+      // if (!this.originalImage) {
+      //   uni.showToast({
+      //     title: '请先选择图片',
+      //     icon: 'none',
+      //   });
+      //   return;
+      // }
 
       // 显示加载中
       uni.showLoading({
