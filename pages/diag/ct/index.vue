@@ -62,11 +62,11 @@ export default {
       sizeIndex: 0, // 当前选择的风格索引
 	  widthArray: [512, 640, 360, 1024, 1280, 720],
 	  heightArray: [512, 360, 640, 1024, 720, 1280],
-	  change_degree: 7,
+	  change_degree: 1,
 	  prompt: "梵高风格，星夜旋转，色彩浓厚，梵高笔触",
 	  taskId: "",
       API_KEY: 'RZsaK2LuyTbODyaFLQOrUWE6', // 请替换为你的 API_KEY
-      SECRET_KEY: 'xrwhWNQOrxqqU8BSNsZkaWTLgQ5eL2rb', // 请替换为你的 SECRET_KEY
+      SECRET_KEY: 'rIzp0vlDEQtqLmqdFVs3GlxgRfIAO7cK', // 请替换为你的 SECRET_KEY
     };
   },
   methods: {
@@ -88,6 +88,7 @@ export default {
             if (res.data && res.data.access_token) {
               this.accessToken = res.data.access_token;
               resolve(res.data.access_token);
+			  console.log('access_token:', res.data.access_token);
             } else {
               uni.showToast({
                 title: '获取访问令牌失败',
@@ -231,7 +232,8 @@ export default {
 		try {
 			const token = await this.getAccessToken();
 			uni.request({
-				url: `https://aip.baidubce.com/rpc/2.0/wenxin/v1/extreme/getImg?access_token=${token}`,
+				// url: `https://aip.baidubce.com/rpc/2.0/wenxin/v1/extreme/getImg?access_token=${token}`,
+				url: `https://aip.baidubce.com/rpc/2.0/ernievilg/v1/getImgv2?access_token=${token}`,
 				method: 'POST',
 				data: {
 					task_id: this.taskId,
@@ -241,6 +243,7 @@ export default {
 				},
 				success: (response) => {
 					if (response.data) {
+						console.log('查询结果:', response.data);
 						if (response.data.data.task_status == "SUCCESS") {
 							uni.hideLoading();
 							console.log('查询结果成功:', response.data.data);
@@ -257,7 +260,7 @@ export default {
 							console.log('查询结果中:', response.data.data);
 							setTimeout(() => {
 								this.queryResult();
-							}, 1000);
+							}, 4000);
 						}
 					} else {
 						uni.hideLoading();
@@ -299,8 +302,9 @@ export default {
 
         // 调用百度风格转换接口
         uni.request({
-          url: `https://aip.baidubce.com/rpc/2.0/wenxin/v1/extreme/textToImage?access_token=${token}`,
-          method: 'POST',
+          // url: `https://aip.baidubce.com/rpc/2.0/wenxin/v1/extreme/textToImage?access_token=${token}`,
+          url: `https://aip.baidubce.com/rpc/2.0/ernievilg/v1/txt2imgv2?access_token=${token}`,
+		  method: 'POST',
           data: {
 			prompt: this.prompt,
 			width: this.widthArray[this.sizeIndex],
@@ -317,7 +321,11 @@ export default {
 			  this.taskId = response.data.data.task_id;
 			  console.log('task_id:', this.taskId);
 			  console.log('task_id:', response.data.data.task_id);
-              this.queryResult();
+              // 一定时间后查询结果
+			  setTimeout(() => {
+				  this.queryResult();
+			  }, 8000);
+			  // this.queryResult();
             } else {
               uni.hideLoading();
               uni.showToast({

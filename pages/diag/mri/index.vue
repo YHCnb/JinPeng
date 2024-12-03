@@ -5,9 +5,9 @@
 	  </view> -->
 	  
 	  <!-- 风格选择器 -->
-	  <picker mode="selector" :range="styleOptions" @change="onStyleChange">
+	  <picker mode="selector" :range="styleOptions_cn" @change="onStyleChange">
 	  	<view class="picker">
-	  	  {{ styleOptions[styleIndex] }}
+	  	  {{ styleOptions_cn[styleIndex] }}
 	  	</view>
 	  </picker>
 	  
@@ -46,7 +46,8 @@ export default {
       convertedImageSrc: '', // 转换后图片本地路径
       accessToken: '', // 百度 API 的访问令牌
       styleOptions: ['cartoon', 'pencil', 'color_pencil', 'warm', 'wave', 'lavender', 'mononoke', 'scream', 'gothic'], // 风格选项
-      styleIndex: 0, // 当前选择的风格索引
+      styleOptions_cn: ['卡通', '铅笔', '彩铅', '暖色', '波浪', '薰衣草', '幽灵', '尖叫', '哥特'], // 风格选项中文
+	  styleIndex: 0, // 当前选择的风格索引
       API_KEY: 'WgVew19N1kOA8k8cV6DvFuOT', // 请替换为你的 API_KEY
       SECRET_KEY: 'TO6E9nGAPhAEh9p1YKrvnPyduIEuxNeK', // 请替换为你的 SECRET_KEY
     };
